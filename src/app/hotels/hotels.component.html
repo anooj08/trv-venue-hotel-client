@@ -1,0 +1,20 @@
+<div class="hotels">
+  <div *ngFor="let hotel of hotels" class="item">
+    <div class="item-img">
+      <a href="#">
+        <img class="avatar media-object" src="{{ hotel.images[0] }}" alt="...">
+      </a>
+    </div>
+    <div class="item-body">
+      <h1 class="media-heading">{{ hotel.name }}</h1>
+      <span class="stars alignright">
+        <span [ngStyle]="{'width': getStars(hotel.rating)}"></span>
+    </span> 
+    <p>Leipzig, {{hotel.distance_to_venue}} to ABC conference</p>
+      <a [routerLink]="['/hotel', hotel.id]" class="btn">View Details</a>
+    </div>
+    <div class="item-price">
+      <h1>{{hotel.price_category | price}}</h1>
+    </div>
+  </div>
+</div>

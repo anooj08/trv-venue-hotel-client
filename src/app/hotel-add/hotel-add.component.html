@@ -1,0 +1,45 @@
+
+          <div class="hotel-add">
+              <form [formGroup]="hotelForm" (ngSubmit)="onSubmit()">
+                  <div class="form-group">
+                      <label>Name</label>
+                      <input type="text" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                      <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                          <div *ngIf="f.name.errors.required">Name is required</div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label>Distance</label>
+                      <input type="text" formControlName="distance_to_venue" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.distance_to_venue.errors }" />
+                      <div *ngIf="submitted && f.distance_to_venue.errors" class="invalid-feedback">
+                          <div *ngIf="f.distance_to_venue.errors.required">Distance is required</div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label>Rating</label>
+                      <input type="text" formControlName="rating" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.rating.errors }" />
+                      <div *ngIf="submitted && f.rating.errors" class="invalid-feedback">
+                          <div *ngIf="f.rating.errors.required">Rating is required</div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                    <label>Price Category</label>
+                    <input type="text" formControlName="price_category" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price_category.errors }" />
+                    <div *ngIf="submitted && f.price_category.errors" class="invalid-feedback">
+                        <div *ngIf="f.price_category.errors.required">Rating is required</div>
+                    </div>
+                </div>
+                  <div class="form-group">
+                      <label>Description</label>
+                      <textarea class="form-control" formControlName="description" [ngClass]="{ 'is-invalid': submitted && f.description.errors }">
+
+                      </textarea>
+                      <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+                          <div *ngIf="f.description.errors.required">Description is required</div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <button [disabled]="loading" class="btn btn-primary">Submit</button>
+                  </div>
+              </form>
+          </div>

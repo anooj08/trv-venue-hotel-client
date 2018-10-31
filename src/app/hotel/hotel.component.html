@@ -1,0 +1,24 @@
+  <div class="hotel-details">
+    <div class="ht-img">
+      <img class="avatar media-object" [src] = "hotel.images[0]" alt="...">
+    </div>
+    <div class="ht-body">
+      <h1>{{hotel.name}}</h1>
+      <span class="stars alignright">
+          <span [ngStyle]="{'width': getStars(hotel.rating)}"></span>
+      </span>
+      <p>Leipzig, {{hotel.distance_to_venue}} to CAN conference hall</p>
+      <p>{{hotel.description}}</p>
+      <div class="amenities">
+        <h1>Amenities</h1>
+        <p *ngFor="let amt of hotel.amenities">{{amt}}</p>
+  
+      </div>
+  
+    </div>
+    <div class="price">
+      <h1>{{hotel.price_category | price}}</h1>
+    </div>
+  </div>
+  <angular-image-slider [images]="hotel.images"></angular-image-slider>
+  <app-rooms></app-rooms>

@@ -1,0 +1,12 @@
+.item{
+    padding: 10px;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+.item-body{
+    flex: 3;
+}
+.item-price{
+    display: flex;
+    font-weight: bold;
+}

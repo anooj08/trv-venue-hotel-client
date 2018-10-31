@@ -1,0 +1,36 @@
+.hotel-details{
+    display: flex;
+    border: 1px solid #ccc;
+    color: #3d3b3b !important;
+}
+.ht-body{
+    margin-right: auto;
+    
+}
+.price{
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: #38464F;
+}
+.amenities h1{
+    color:#D5351D !important;
+}
+img{
+    height: 200px;
+    width: 200px;
+}
+
+@media only screen and (max-width: 768px) {
+    .hotel-details{
+        display: flex;
+        border: 1px solid #ccc;
+        flex-direction: column;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+}
